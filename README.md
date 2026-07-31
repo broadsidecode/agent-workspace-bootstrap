@@ -1,5 +1,7 @@
 # Agent Workspace Bootstrap
 
+![Agents working together in one workspace](assets/banner.png)
+
 One prompt that builds you a complete multi-agent AI workspace.
 
 Paste [PROMPT.md](PROMPT.md) into a fresh Claude Code session and it becomes your setup guide. It interviews you one question at a time, explains every choice in plain English before you make it, and does the work itself as you go: folders, git, agent contracts, shared memory, GitHub wiring, skills, and a final dry run.
