@@ -6,6 +6,8 @@ Paste [PROMPT.md](PROMPT.md) into a fresh Claude Code session and it becomes you
 
 ![Workspace layout](assets/workspace-tree.png)
 
+> **Before you run it:** this prompt builds a complete new monorepo workspace from scratch. It is not a tool for restructuring or migrating an existing repo. Run it in a fresh, empty folder, completely separate from any projects or repos you already have. It never needs to touch your existing work, and you should not point it at it.
+
 ## What you end up with
 
 - One git repo holding everything: agents, projects, memory, plans, tools, skills.
