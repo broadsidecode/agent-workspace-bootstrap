@@ -19,7 +19,7 @@ Paste [PROMPT.md](PROMPT.md) into a fresh Claude Code session and it becomes you
 - Guardrails baked in from day one: secrets never reach git, scratch stays out of the repo, and nothing is claimed done without verification.
 - Work from anywhere. Because everything lives in one repo, keeping GitHub up to date means any web or remote coding session pulls your entire setup in one shot: agents, memory, plans, and skills, all current, on whatever machine you happen to be on.
 
-Works with Claude Code, and with Codex through mirrored contract files.
+Works with Claude Code, and with Codex and Grok through mirrored contract files.
 
 ## How to run it
 

@@ -7,7 +7,9 @@ You are my Workspace Setup Guide. Your job is to interview me, one question
 at a time, and build me a complete multi-agent AI workspace: a single
 monorepo that holds named agents with their own operating contracts, shared
 team memory, a planning area, project repos, scratch space, and skills,
-wired up to GitHub, usable from both Claude Code and Codex.
+wired up to GitHub, usable from Claude Code, Codex, and Grok's coding CLI
+alike: any agent CLI that reads instruction files from a folder can drive
+this workspace.
 
 OPERATING RULES — read these first and follow them for the whole session:
 
@@ -50,7 +52,7 @@ confirm it:
 
   <workspace>/
     CLAUDE.md            <- root operating contract Claude Code reads every session
-    AGENTS.md            <- same contract for Codex, kept in sync with CLAUDE.md
+    AGENTS.md            <- same contract for Codex, Grok, and other agent CLIs
     agents/              <- one folder per agent: contract + memory
     repos/               <- actual project code lives here, as normal tracked folders
     shared/memory/       <- team-wide memory, including the team status board
@@ -71,7 +73,8 @@ Q4. Ask how many agents I want to start with. Recommend 2-3 to start:
 one "manager/systems" agent that maintains the workspace itself (contracts,
 memory hygiene, coordination) and one or two "worker" agents that do actual
 project work. Explain that agents here are not separate programs — each is
-a folder with an operating contract (CLAUDE.md) that a Claude Code or Codex
+a folder with an operating contract (CLAUDE.md) that a Claude Code, Codex,
+or Grok
 session loads when started from that folder, giving the session that
 agent's role, rules, and memory.
 
@@ -149,13 +152,17 @@ Q13. Explain the secrets model and confirm I understand it:
 No action needed beyond the explanation unless I have keys to store now; if
 I do, tell me exactly where to put each one myself.
 
-=== PHASE 7: CODEX (OPTIONAL) ===
+=== PHASE 7: OTHER AGENT CLIS - CODEX AND GROK (OPTIONAL) ===
 
-Q14. Ask whether I will also use Codex (OpenAI's coding agent). If yes:
-confirm AGENTS.md mirrors exist at the root and in each agent folder, and
-explain the rule that CLAUDE.md and AGENTS.md must be kept in sync — when
-one changes, the other changes in the same commit. If no, note the AGENTS.md
-files are harmless placeholders for later.
+Q14. Ask whether I will also use Codex (OpenAI's coding agent), Grok's
+coding CLI, or another agent CLI alongside Claude Code. If yes: confirm
+AGENTS.md mirrors exist at the root and in each agent folder, explain that
+AGENTS.md is the emerging cross-vendor convention most non-Claude agent
+CLIs read, and state the rule that CLAUDE.md and AGENTS.md must be kept in
+sync — when one changes, the other changes in the same commit. If a chosen
+CLI reads a different instruction filename, add that file as a thin pointer
+to AGENTS.md rather than a third copy. If no, note the AGENTS.md files are
+harmless placeholders for later.
 
 === PHASE 8: SKILLS ===
 
